@@ -1,5 +1,4 @@
 import pygame
-from pygame import *  # PyGame модуль
 
 # For fast test
 print("For fast test")
@@ -30,12 +29,12 @@ def main():
 
         for ev in pygame.event.get():  # Обрабатываем события
             # ALT + F4 - закрытие окна
-            if (ev.type == QUIT) or (ev.type == KEYDOWN and (ev.key == K_F4 and ev.mod == 256)): #K_LALT and K_RALT not working
+            if (ev.type == pygame.QUIT) or (ev.type == pygame.KEYDOWN and (ev.key == pygame.K_F4 and ev.mod == 256)): #K_LALT and K_RALT not working
                 running = False
 
-            if ev.type is KEYDOWN and ev.key == K_F10:
+            if ev.type is pygame.KEYDOWN and ev.key == pygame.K_F10:
                 if window_mode:  # Если были в оконном режиме - переключаемся в Fullscreen
-                    screen = pygame.display.set_mode(display, FULLSCREEN)
+                    screen = pygame.display.set_mode(display, pygame.FULLSCREEN)
                     window_mode = False
                 else:  # Если были в Fullscreen режиме - переключаемся в оконный
                     screen = pygame.display.set_mode(display)
