@@ -1,3 +1,5 @@
 # For fast test
 import dmap
-print("For fast test")
+x = dmap.DMap()
+print(x.z)
+print(x.fname)
